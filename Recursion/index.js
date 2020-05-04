@@ -16,4 +16,14 @@ const countUp = (min, max) => {
   console.log(min);
   countUp(min + 2, max)
 }
-console.log(countUp(0,10))
+console.log(countUp(0, 10))
+
+console.log("Factorial");
+
+const factorialRec = (num) => {
+  if (num < 0) return ("No negatives!");
+  if (num <= 1) return 1;
+  return factorialRec(num - 1)* num
+}
+console.log(factorialRec(5))
+
