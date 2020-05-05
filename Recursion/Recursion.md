@@ -90,3 +90,9 @@ const fib = (n) => {
   }
   return fib(n - 1) + fib(n - 2);
 }
+
+conclusion: 
+
+Recursive should have
+Base Case  => takes care of edge cases and tells our function when to stop 
+Inductive Step => makes a step towards the base case .

@@ -16,7 +16,7 @@
 //   countDownToZero(num-1)
 // }
 //  console.log(countDownToZero(10))
-// console.log("-------------------------------")
+// console.log("-------------------------------");
 
 // console.log("count up by 2 Iterative method");
 // const countUpIterative = (start, to) => {
@@ -36,27 +36,50 @@
 // }
 // console.log(countUp(0, 10))
 
-console.log("-------------------------------")
+// console.log("-------------------------------");
 
-console.log("Factorial Iterative method");
+// console.log("Factorial Iterative method");
 
-const factorialIterative = (num) => {
-  let result = num;
-  if (num === 0 || num === 1) return 1;
-  while (num > 1) {
-    num--;
-    result *= num;
+// const factorialIterative = (num) => {
+//   let result = num;
+//   if (num === 0 || num === 1) return 1;
+//   while (num > 1) {
+//     num--;
+//     result *= num;
+//   }
+//   return result
+// }
+// console.log(factorialIterative(5));
+
+// console.log("Factorial Recursive method");
+
+// const factorialRec = (num) => {
+//   if (num < 0) return ("No negatives!");
+//   if (num <= 1) return 1;
+//   return factorialRec(num - 1)* num
+// }
+// console.log(factorialRec(5))
+
+console.log("-------------------------------");
+
+console.log("Product Iterative");
+
+const productIterative = (arr) => {
+  let product = 1;
+  for (let i = 1; i <= arr.length; i++) {
+    product *= i
   }
-  return result
+  return product
 }
-console.log(factorialIterative(5));
+console.log(productIterative([1, 2, 3, 4]))
 
-console.log("Factorial Recursive method");
+console.log("Product Recursively");
 
-const factorialRec = (num) => {
-  if (num < 0) return ("No negatives!");
-  if (num <= 1) return 1;
-  return factorialRec(num - 1)* num
+const productRecursive = (arr, i = 0) => {
+  if (!arr.length) return 0;
+  if (i >= arr.length) return 1
+  return productRecursive(arr, i+1) * arr[i]
 }
-console.log(factorialRec(5))
+console.log(productRecursive([1, 2, 3, 4]))
+
 
