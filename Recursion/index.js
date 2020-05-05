@@ -60,26 +60,40 @@
 // }
 // console.log(factorialRec(5))
 
-console.log("-------------------------------");
+// console.log("-------------------------------");
 
-console.log("Product Iterative");
+// console.log("Product Iterative");
 
-const productIterative = (arr) => {
-  let product = 1;
-  for (let i = 1; i <= arr.length; i++) {
-    product *= i
+// const productIterative = (arr) => {
+//   let product = 1;
+//   for (let i = 1; i <= arr.length; i++) {
+//     product *= i
+//   }
+//   return product
+// }
+// console.log(productIterative([1, 2, 3, 4]))
+
+// console.log("Product Recursively");
+
+// const productRecursive = (arr, i = 0) => {
+//   if (!arr.length) return 0;
+//   if (i >= arr.length) return 1
+//   return productRecursive(arr, i+1) * arr[i]
+// }
+// console.log(productRecursive([1, 2, 3, 4]));
+
+const productRecursive2 = (array) => {
+  let arr = [...array];
+  const product = (arr) => {
+    if(!arr.length) return 0;
+    if (arr.length === 1) return arr[0];
+    let el = arr.pop()
+    return product(arr) * el
   }
-  return product
+  return product(arr)
 }
-console.log(productIterative([1, 2, 3, 4]))
+console.log(productRecursive2([1, 2, 3, 4]))
 
-console.log("Product Recursively");
 
-const productRecursive = (arr, i = 0) => {
-  if (!arr.length) return 0;
-  if (i >= arr.length) return 1
-  return productRecursive(arr, i+1) * arr[i]
-}
-console.log(productRecursive([1, 2, 3, 4]))
 
 
