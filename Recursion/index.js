@@ -82,17 +82,35 @@
 // }
 // console.log(productRecursive([1, 2, 3, 4]));
 
-const productRecursive2 = (array) => {
-  let arr = [...array];
-  const product = (arr) => {
-    if(!arr.length) return 0;
-    if (arr.length === 1) return arr[0];
-    let el = arr.pop()
-    return product(arr) * el
-  }
-  return product(arr)
+// const productRecursive2 = (array) => {
+//   let arr = [...array];
+//   const product = (arr) => {
+//     if(!arr.length) return 0;
+//     if (arr.length === 1) return arr[0];
+//     let el = arr.pop()
+//     return product(arr) * el
+//   }
+//   return product(arr)
+// }
+// console.log(productRecursive2([1, 2, 3, 4]))
+
+console.log("-------------------------------");
+
+console.log("Sum recursively");
+
+const sumRec = (arr, i = 0) => {
+  if(i >= arr.length) return 0;
+  return sumRec(arr, i + 1) + arr[i];
 }
-console.log(productRecursive2([1, 2, 3, 4]))
+console.log(sumRec([1, 2, 3, 4]))
+
+const sum1 = (arr) => {
+  if (!arr.length) return 0;
+  let el = arr.pop();
+  return sum1(arr) + el
+}
+console.log(sum1([1, 2, 3, 4]))
+
 
 
 
