@@ -1,10 +1,9 @@
 What's a Linked List?
 
 Storing Data Sequentially
-A Linked List is the most fundamental data structure you can make. One of the first problems you probably encountered as a programmer: how do I store a collection of data? Like a group of fruits, or To-Dos for your tasks. This is when you were introduced you to Arrays.
+A Linked List is the most fundamental data structure you can make. You should always think how do you store a collection of data? 
 
 Arrays
-Arrays in Javascript is your swiss army knife. It can pretty much do anything.
 
 Arrays in most low level languages is a very primitive collection. In languages like C++ you need to provide a location in memory for every variable. Each time you want to store an item in memory, you ask the computer for some space, and it gives you an address where you can store your item.
 
@@ -29,8 +28,8 @@ Linked List
 Nodes
 A node is the building block of a Linked List. Each 'element' is a node. A node is an Abstract Class that does two things:
 
-Store information
-Hold reference to the next Node
+1. Store information
+2. Hold reference to the next Node
 By doing so, you can chain nodes one after another and form a Linked Data Structure.
 
 class Node {
