@@ -1,35 +1,35 @@
 //linked list
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
-let head = new Node(2);
-let nextHead = new Node(3);
-let third = new Node(4);
-let fourth = new Node(5);
-let fifth = new Node(6);
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.next = null;
+//   }
+// }
+// let head = new Node(2);
+// let nextHead = new Node(3);
+// let third = new Node(4);
+// let fourth = new Node(5);
+// let fifth = new Node(6);
 
-head.next = nextHead;
-nextHead.next = third;
-third.next = fourth;
-fourth.next = fifth;
-// console.log(head)
+// head.next = nextHead;
+// nextHead.next = third;
+// third.next = fourth;
+// fourth.next = fifth;
+// // console.log(head)
 
-const findOdds = (head) => {
-  let output = []; 
-  let current = head;
-  while(current) {
-      if(current.val % 2 === 1) {
-          output.push(current.val);
-      }
-      current = current.next; 
-  }
-  return output;
-}
+// const findOdds = (head) => {
+//   let output = []; 
+//   let current = head;
+//   while(current) {
+//       if(current.val % 2 === 1) {
+//           output.push(current.val);
+//       }
+//       current = current.next; 
+//   }
+//   return output;
+// }
 
-console.log(findOdds(head));
+// console.log(findOdds(head));
 
 
 // Node {
@@ -64,22 +64,50 @@ headOdd.next = nextHeadOdd;
 nextHeadOdd.next = thirdOdd;
 thirdOdd.next = fourthOdd;
 fourthOdd.next = fifthOdd;
-fifthOdd.nex = sixthOdd;
+fifthOdd.next = sixthOdd;
 
-const findOdds2 = (headOdd) => {
+const findOdds = (head) => {
   let output = [];
   let current = headOdd;
-  console.log(current.value, " before while loop")
   while (current) {
     if (current.value % 2 === 1) {
-      console.log(current.value, " after while loop")
-      output.push(current.Value)
+      output.push(current.value)
     }
     current = current.next;
   }
   return output
 }
-console.log(findOdds2(headOdd))
+console.log(findOdds(headOdd))
 
+// initials the Node
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+// declare  the linked list
+let head = new Node(6);
+let nextHead = new Node(8);
+let third = new Node(6)
+let fourth = new Node(9);
+// create the linked list
+head.next = nextHead;
+nextHead.next = third
+third.next = fourth
 
+// let create and array and has only even number
+
+const evenNum = (head) => {
+  let newArr = [];
+  let currentHead = head;
+  while (currentHead) {
+    if (currentHead.val % 2=== 0) {
+      newArr.push(currentHead.val)
+    }
+    currentHead =currentHead.next
+  }
+  return newArr
+}
+console.log(evenNum(head))
 
