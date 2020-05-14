@@ -3,6 +3,10 @@
 
 // Stack === FILO :=> StacksAPI or method ===> push, pop, isEmpty, peek
 
+//Queues => FIFO => first in first ou line in the restaurant
+//  Queues API ==>  enqueue, dequeue, isEmpty, peek
+//-------------------------------------------------------
+
 // class Node {
 //   constructor(val) {
 //     this.val = val;
@@ -143,4 +147,5 @@ const findProduct2 = (stack) => {
   return prod
 }
 let stack = new Stack1([1, 2, 3, 4, 5, 6, 7, 8])
-console.log(findProduct2(stack))
+console.log(findProduct2(stack));
+
